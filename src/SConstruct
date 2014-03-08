@@ -256,7 +256,7 @@ elif ( BUILD == 'release' ):
 		# -fschedule-insns2: implicit at -O3
 		# -funroll-loops ?
 		# -mfpmath=sse -msse ?
-		OPTCPPFLAGS = [ '-O3', '-march=i686', '-Winline', '-ffast-math', '-fomit-frame-pointer', '-finline-functions', '-fschedule-insns2' ]
+		OPTCPPFLAGS = [ '-Ofast', '-march=native', '-Winline', '-ffast-math', '-fomit-frame-pointer', '-finline-functions', '-fschedule-insns2', '-funroll-all-loops' ]
 	elif ( OS == 'Darwin' ):
 		OPTCPPFLAGS = []
 else:
