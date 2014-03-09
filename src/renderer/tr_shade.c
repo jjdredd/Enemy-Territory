@@ -1524,7 +1524,9 @@ void RB_StageIteratorVertexLitTexture( void ) {
 	//
 	R_BindAnimatedImage( &tess.xstages[0]->bundle[0] );
 	GL_State( tess.xstages[0]->stateBits );
+	qglDisable( GL_DEPTH_TEST );
 	R_DrawElements( input->numIndexes, input->indexes );
+	qglEnable( GL_DEPTH_TEST );
 
 	//
 	// now do any dynamic lighting needed
